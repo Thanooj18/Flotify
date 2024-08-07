@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ album_details.name }} - Album Details</title>
+    <link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
+    <link rel="stylesheet" href="/static/fontawesome.min.css"> <!-- Adjust the path accordingly -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+
+</head>
+<body>
+    <header>
+        <div class="spotify-logo">
+			<a href="/">
+				<img src="/static/spotify.jpg" alt="Spotify Logo">
+			</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/login">Login/Signup</a></li>
+			</ul>
+		</nav>
+    </header>
+
+    <main>
+        <h2>Album Details</h2>
+        <div class="album-details">
+            <img src="{{ album_details.image_url }}" alt="{{ album_details.name }}" class="album-image">
+            <h3>{{ album_details.name }}</h3>
+            <p>{{ album_details.artist }} . {{ album_details.year }}</p>
+            <h4>Songs:</h4>
+            <ul class="song-listss">
+                {% for song in album_details.songs %}
+                <li onclick="playSong('{{ song }}')">{{ song }} </li>
+                {% endfor %}
+            </ul>
+
+            <!-- Add the audio player, progress bar, and control buttons -->
+            <audio id="audio-player" controls>
+                Your browser does not support the audio element.
+            </audio>
+            <div class="progress-container">
+                <span class="progress-time progress-ongoing">0:00</span>
+                <div class="progress-bar" onclick="seek(event)">
+                    <div class="progress"></div>
+                </div>
+                <span class="progress-time progress-total">0:00</span>
+            </div>
+            <!-- Buttons with Font Awesome icons -->
+            <div class="audio-controls">
+                <button class="control-btn" onclick="backward()"><i class="fas fa-backward"></i></button>
+                <button class="control-btn" onclick="playResume()"><i class="fas fa-play"></i></button>
+                <button class="control-btn" onclick="forward()"><i class="fas fa-forward"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Flotify</p>
+    </footer>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>

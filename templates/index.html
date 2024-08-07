@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Music Store</title>
+	<link rel="stylesheet" type="text/css"  href="/static/stylesheet.css" />
+</head>
+<body>
+    <header>
+		<div class="spotify-logo">
+		  <a href="/">
+			<img src="/static/spotify.jpg" alt="Spotify Logo">
+		  </a>
+		  
+		</div>
+		<div class="header-title">
+			<h1>Flotify</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				{% if 'email' in session %}
+					<li><a href="/logout">Logout</a></li>
+				{% else %}
+				<li><a href="/login">Login</a></li>
+				<li><a href="/signup">Signup</a></li>
+				{% endif %}
+			</ul>
+		</nav>
+		
+		
+	  </header>
+
+    <main>
+        <h2>Featured Albums</h2>
+        <div class="album-cards">
+			<div class="album-card">
+				<a href="/album_details/1">
+				<img src="/static/starboy.jpg" alt="Starboy">
+				</a>
+				<a href="/album_details/1">
+					<div class="album-details">
+						<h3>Starboy</h3>
+						<a href="/artist_details/The%20Weeknd">
+							<p>The Weeknd</p></a>
+					</div>
+				</a>
+			</div>
+			
+			<div class="album-card">
+				<a href="/album_details/2">
+					<img src="/static/fightingdemons.jpg" alt="juicewrld">
+				</a>
+				<a href="/album_details/2">
+					<div class="album-details">
+						<h3>Fighting Demons</h3>
+						<a href="/artist_details/Juice Wrld">
+							<p>Juice Wrld</p></a>
+				</div>
+			</div>
+
+			<div class="album-card">
+				<a href="/album_details/3">
+					<img src="/static/beauty.jpg" alt="bbtm">
+				</a>
+				<a href="/album_details/3" >
+					<div class="album-details">
+						<h3>Beauty Behind the Madness</h3>
+						<a href="/artist_details/The%20Weeknd">
+						<p>The Weeknd</p></a>
+					</div>
+				</a>
+			</div>
+			<div class="album-card">
+				<a href="/album_details/4">
+					<img src="/static/skins.png" alt="xxxt">
+				</a>
+				<a href="/album_details/4">
+					<div class="album-details">
+						<h3>SKINS</h3>
+						<a href="/artist_details/XXXTentacion">
+						<p>XXXTentacion</p></a>
+					</div>
+				</a>
+			</div>
+			<!-- Repeat the album-card structure for other albums -->
+		</div>
+			
+    </main>
+    <footer>
+        <p>&copy; 2023 Flotify</p>
+    </footer>
+
+
+	
+	<script>
+		// Get all the album name links with the "show-songs" class
+		var albumNameLinks = document.querySelectorAll('.show-songs');
+		
+		// Add a click event listener to each album name link
+		albumNameLinks.forEach(function(link) {
+			link.addEventListener('click', function(event) {
+				// Prevent the default link behavior
+				event.preventDefault();
+		
+				// Get the song list element related to the clicked album name link
+				var songList = link.nextElementSibling.querySelector('.song-list');
+		
+				// Toggle the visibility of the song list
+				if (songList.style.display === 'none') {
+					songList.style.display = 'block';
+				} else {
+					songList.style.display = 'none';
+				}
+			});
+		});
+	</script>
+</body>
+</html>

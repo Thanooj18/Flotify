@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ artist_details.name }} - Artist Details</title>
+    <link rel="stylesheet" type="text/css" href="/static/stylesheet.css">
+</head>
+<body>
+    <header>
+        <div class="spotify-logo">
+            <a href="/">
+                <img src="/static/spotify.jpg" alt="Spotify Logo">
+            </a>
+        </div>
+        <div class="header-title">
+            <h1>Flotify</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                {% if 'email' in session %}
+                    <li><a href="/logout">Logout</a></li>
+                {% else %}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">Signup</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">{{ artist_details.name }} </h2>
+        <div class="artist-details">
+            <img src="{{ artist_details.image_url }}" alt="{{ artist_details.name }}" class="artist-image">
+            <h3 class="artist-name">{{ artist_details.name }}</h3>
+            <p class="artist-origin">{{ artist_details.origin }}</p>
+            <p class="artist-description">{{ artist_details.description }}</p>
+            <p class="artist-genre">Genre: {{ artist_details.genre }}</p>
+        </div>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2023 Flotify</p>
+    </footer>
+</body>
+</html>
