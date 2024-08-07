@@ -1,0 +1,705 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #324d3c; 
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================== */
+/* ALBUM STYLES  */
+main {
+    padding: 2rem;
+}
+
+.album-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.album-card {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.album-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.album-details {
+    padding: 1rem;
+}
+
+.album-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1DB954; /* Green color similar to Spotify */
+    font-family: 'Helvetica Neue', sans-serif; /* Similar font family to Spotify */
+}
+
+.album-details p {
+    font-size: 14px;
+    color: #888;
+    font-family: 'Helvetica Neue', sans-serif; /* Similar font family to Spotify */
+    font-weight: bold; /* Adjust the font weight to match Spotify's style */
+    margin-bottom: 0.25rem; /* Reduce the bottom margin to tighten the spacing */
+}
+audio {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fff; /* Change the background color of the audio player */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  }
+  .audio-player{
+    color: #1db954;
+
+  }
+
+  .progress-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #282828;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #1db954; /* Change the color of the progress bar */
+    border-radius: 5px;
+  }
+  
+  .progress-time {
+    font-size: 12px;
+    color: #888;
+    margin-left: 5px;
+  }
+  /* Style for the progress bar */
+ 
+  /* Style for the player controls */
+  .player-controls {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for the player control buttons */
+  .player-controls button {
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    color: #1db954; /* Set the text color to Spotify's green color */
+    padding: 5px;
+    font-size: 20px;
+  }
+  
+  /* Style for the icons */
+  .player-controls i {
+    margin-bottom: 5px; /* Adjust the spacing between icons and the progress bar */
+  }
+  
+  .audio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.control-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #000; /* Change color as needed */
+}
+  /* Add specific styles for Font Awesome icons (if using Font Awesome library) */
+  /* Replace "path/to/font-awesome.css" with the actual path to the Font Awesome CSS file */
+  @import url("/static/fontawesome.min.css");
+  /* Style for the album image */
+  .album-image {
+    max-width: 200px;
+    height: auto;
+  }
+ 
+  .album-image {
+    transition: transform 0.2s ease-in-out;
+}
+
+.album-image:hover {
+    transform: scale(1.05);
+}
+.album-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+}
+  /* Add a style for the song list to ensure it's visible */
+  .song-listss {
+    list-style: none;
+    padding: 0;
+  }
+.song-list {
+    display: none;
+    padding: 1rem;
+    background-color: #f5f5f5;
+}
+
+.song-list ul {
+    list-style: none;
+}
+
+.song-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Album Details Page */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: #f8f8f8; /* Green color for the heading */
+}
+
+.album-details {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.album-details img.album-image {
+    width: 110px; /* Adjust the width as needed */
+    height: 110px; /* Adjust the height as needed */
+    object-fit: cover; /* Crop the image to cover the container */
+    border-radius: 50%; /* Create a circular crop effect */
+    margin-bottom: 20px; /* Add some spacing below the image */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 ; /* Center the image horizontally */
+}
+
+
+
+.song-listss {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+.song-listss li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+
+.song-listss li:last-child {
+    border-bottom: none;
+}
+
+.song-listss li img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.song-listss li span {
+    flex: 1;
+    font-size: 16px;
+}
+
+.song-listss li p {
+    font-size: 14px;
+    color: #888;
+}
+
+
+
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    color: #1DB954; /* Green color for the Songs heading */
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+/* ============================== */
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #29302b; /* Spotify green */
+}
+
+.spotify-logo img {
+    height: 40px;
+    vertical-align: middle;
+  }
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #333; /* Dark grey for hover effect */
+}
+nav li {
+    margin-right: 20px;
+}
+nav li:first-child {
+    margin-left: 0;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #1DB954;
+}
+
+
+/* Main Styles */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main li {
+    flex-basis: calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+main li a {
+    display: block;
+    text-align: center;
+}
+
+main li h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+main li p {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+main li img {
+    max-width: 100%;
+    height: auto;
+}
+footer p {
+    font-size: 0.875rem;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 1rem;
+}
+
+nav a {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #dddede;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+.song-list {
+    display: none;
+    transition: display 0.5s ease-in-out;
+}
+
+.song-list ul {
+    list-style: none;
+}
+
+.song-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+#email,#name,#new_password,
+#password {
+    color: white;
+}
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    background-color: #1db954;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* ====== LOGIN.html     ==== */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    text-align: center;
+}
+.container h1{
+    color:white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Link Styles */
+a {
+    color: #1db954;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+
+/* audio button */
+/* Style the audio player */
+#audioPlayer {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style the audio controls */
+  #audioPlayer::-webkit-media-controls-panel {
+    background-color: #1db954;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Style the progress bar */
+  #audioPlayer::-webkit-media-controls-timeline {
+    height: 8px;
+    background-color: #282828;
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 8px;
+  }
+  
+  /* Style the current time and duration display */
+  #audioPlayer::-webkit-media-controls-current-time-display,
+  #audioPlayer::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  /* Style the play and pause buttons */
+  #audioPlayer::-webkit-media-controls-play-button,
+  #audioPlayer::-webkit-media-controls-pause-button {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
+  
+  /* Style the play button icon */
+  #audioPlayer::-webkit-media-controls-play-button::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 0;
+    border-color: transparent transparent transparent #282828;
+    margin-left: 6px;
+  }
+  
+  /* Style the pause button icon */
+  #audioPlayer::-webkit-media-controls-pause-button::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 16px;
+    background-color: #282828;
+    margin: 2px;
+  }
+  
+  /* Hide default audio controls */
+  audio {
+    display: none;
+  }
+  
+
+/* CSS for Artist_Details Page */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1db954; /* Spotify Green Color */
+}
+
+.artist-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.artist-image {
+    max-width: 100%;
+    height:400px ;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.artist-name {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.artist-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.artist-genre {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #888;
+}
+
+.artist-origin {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #888;
+}
